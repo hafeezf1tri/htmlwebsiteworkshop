@@ -157,14 +157,27 @@
 
     }
 
-    & .liquid-shape path {
-
+    & .liquid-shape > path {
+        
         fill: var(--gradient-color);
 
     }
 
     & .img-box {
-        position: 
+        position: relative;
+        z-index: 1;
+    }
+
+    & .img-box img {
+        max-width: 400px;
+        height: auto;
+        border-radius: 50%;
+        filter: drop-shadow(8px 5px rgb(12, 44, 151));
+        transition: transform 0.3x ease-in-out;
+    }
+
+    & .img-box img:hover {
+        transform: scale(1.25);
     }
     
 }
