@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    position: fixed;
+    padding: 20px;
+    width:100svw;
+    height:5svw;
+    background-color: var(--header-color);
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+
+    & .logo-holder {
+        display: flex;
+        font-size: 1.5em;
+        gap: 1em;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    & .img {
+        width: 5vmin; height: auto;
+
+    }
+
+    & .logo-title {
+        background: var(--gradient-color);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+}
