@@ -20,6 +20,7 @@
 
     <!--Handle links for google fonts: icon-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <!-- Handle link for tab icon on browser -->
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
@@ -39,7 +40,7 @@
     <!-- 1. Header -->
      <header>
             <div class="logo-holder">
-                    <img src="./assets/images/logo.png" style="object-fit: contain; width: 50%; height: 50%; ">
+                    <img src="./assets/images/logo.png" style="object-fit: contain; width: 5%; height: 5%; ">
                     <div class ="section-title">
                         <span class="logo-title">sora</span>
                     </div>
@@ -60,20 +61,67 @@
     <!-- 2. Home Section -->
     <section id="home">
         <div class="home section-wrapper">
+            <!-- texts left side of home section -->
             <div class="intro-text">
-                <p class="welcoming-text">hello welcoem to my portfolio</p>
-                <h1>im hafeez</h1>
-                <p> <q class="tagline"> making the world a better place </q></p>
-                <div class="cta-button">
-                    <a href="#projects" class="btn button-project">
-                        
-                    </a>
-                </div>
+              <p class="welcoming-text"></p>Hello! Welcome to My Portfoilio Website!</p>
+              <h1>I'm hafeezk</h1>
+              <h2>likes tech and stuff.</h2>
+              <p><q class="tagline">make stuff, break stuff, build stuff</q></p>
+              <div class="cta-button">
+                <a href="#projects" class="btn button-project">View My Projects
+                  <span class="icon">
+                    <!-- Code Snippet #1 - Under <span class="icon"> play svg -->
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+                            <path d="m426-330 195-125q14-9 14-25t-14-25L426-630q-15-10-30.5-1.5T380-605v250q0 18 15.5 26.5T426-330Zm54 250q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/>
+                        </svg>
+                  </span>
+                </a>
+                <a href="./assets/cat.png" download="cat.png" class="btn button-download">Download img
+                  <!-- Code Snippet #2 - Under <span class="icon"> download svg -->
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
+                </a>
+              </div>
             </div>
-        </div>
+          </div>
+        
+          <div class="img-holder">
+            <div class="img-box">
+                <img src="assets/cat.png"> 
+            </div>
+
+            <div class="liquid-shape">
+                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                    <defs>
+                        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#9870F2; stop-opacity:1" />
+                            <stop offset="33%" style="stop-color:#7c55d7; stop-opacity:1" />
+                            <stop offset="66%" style="stop-color:#5D17EABF; stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#5D17EAFF; stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path fill="url(#gradient1)">
+                        <animate attributeName="d"
+                            dur="20s"
+                            repeatCount="indefinite"
+                            values="
+                            M423,295Q373,340,336.5,372.5Q300,405,249.5,406.5Q199,408,130,397.5Q61,387,60.5,318.5Q60,250,91,203.5Q122,157,149.5,91Q177,25,242,49.5Q307,74,378.5,89.5Q450,105,461.5,177.5Q473,250,423,295Z;
+                            M445.5,320Q443,390,372,398Q301,406,245,421.5Q189,437,118.5,416.5Q48,396,35,323Q22,250,54.5,191Q87,132,134.5,86Q182,40,252.5,32.5Q323,25,384,66.5Q445,108,446.5,179Q448,250,445.5,320Z;
+                            M412.88138,307.37344Q408.27695,364.74687,368.31725,427.98809Q328.35755,491.2293,259.73099,460.4319Q191.10443,429.6345,128.49603,406.50397Q65.88763,383.37344,82.34961,316.68672Q98.81159,250,113.42396,205.73099Q128.03633,161.46198,165.5403,133.34961Q203.04427,105.23724,251.97389,99.84167Q300.90351,94.4461,346.12031,120.689Q391.33711,146.9319,404.41146,198.46595Q417.48581,250,412.88138,307.37344Z;
+                            M437.3786,298.55014Q384.13724,347.10029,345.6214,387.2085Q307.10557,427.3167,243.58181,446.56334Q180.05806,465.80998,152.86804,403.02111Q125.67802,340.23225,93.9261,295.11612Q62.17419,250,89.11348,201.02111Q116.05278,152.04223,146.09501,86.73489Q176.13724,21.42755,239.56598,53.72697Q302.99472,86.02639,354.46569,111.53431Q405.93666,137.04223,448.27831,193.52111Q490.61996,250,437.3786,298.55014Z;
+                            M431,299.5Q386,349,351.5,402Q317,455,258,430.5Q199,406,157.5,377Q116,348,73.5,299Q31,250,56,188.5Q81,127,140,110.5Q199,94,252,87.5Q305,81,376.5,93.5Q448,106,462,178Q476,250,431,299.5Z;
+                            M440,311.5Q419,373,361.5,394.5Q304,416,249.5,417.5Q195,419,160.5,379.5Q126,340,108,295Q90,250,108.5,205.5Q127,161,151,90Q175,19,237.5,58Q300,97,358,113.5Q416,130,438.5,190Q461,250,440,311.5Z;
+                            M423,295Q373,340,336.5,372.5Q300,405,249.5,406.5Q199,408,130,397.5Q61,387,60.5,318.5Q60,250,91,203.5Q122,157,149.5,91Q177,25,242,49.5Q307,74,378.5,89.5Q450,105,461.5,177.5Q473,250,423,295Z;
+                            "
+                        ></animate>
+                    </path>
+                </svg>  
+            </div>
+
+          </div>
     </section>
     <!-- 3. About Section -->
     <section id="about"></section>
+    
     <!-- 4. Skills Section -->
     <section id="skills"></section>
     <!-- 5. Projects Section -->
