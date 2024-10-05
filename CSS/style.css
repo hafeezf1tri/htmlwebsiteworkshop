@@ -73,13 +73,13 @@
 /* Styles for h2 element  */
 
 h1 {
-    font-size: 1.75em;
+    font-size: 6em;
     color: var(--primary-font-color);
 
 
 }
 h2 {
-    font-size: 1.75em;
+    font-size: 4em;
     color: var(--secondary-font-color);
 
 
@@ -167,5 +167,11 @@ section:nth-child(even) {
 section:not(.main-section){
     height: 100vmin;
     scroll-margin-top: 10vmin;
+
+}
+
+.button-contact {
+
+    
 
 }

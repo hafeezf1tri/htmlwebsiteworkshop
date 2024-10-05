@@ -1,0 +1,142 @@
+/* Define CSS variables for colors and gradients */
+:root {
+    --accent-color: #6134bd;
+    --lighter-accent-color: #d1bbffae;
+    --bg-color: #0b1215;
+    --bg-color-2: #070a0d;
+    --header-color: #181D23;
+    --primary-font-color: #d6d6d6;
+    --secondary-font-color: #B0B0B0;
+    --tertiary-font-color: #8A8F99;
+    --gradient-color: linear-gradient(to right, #ad94e8, #9b81d7 , #916ade, #7f51db);
+    --button-color: #202225;
+    --button-hover-color:#303335;
+    --button-font-color: #D1D3D5;
+    --repeating-grid-color: #cfcdcd0b;
+    --card-color: #21212180;
+    
+
+    /* shadow color */
+    --sd-highlight: #00000080;
+    --sd-darken: #8b87871d;
+
+    scroll-behavior: smooth;
+}
+
+
+.home {
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.intro-text {
+    flex: 1;
+    padding-right: 40px;
+
+
+& h1, & h2  {
+    padding: 20px 0 20px 0; 
+}
+
+.tagline::before {
+    content: ' ';
+    background-color: var(--accent-color); 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 0.25em; 
+    height: 100%; 
+    z-index: 100; 
+}
+
+& .tagline {
+    
+    position: relative; 
+    padding: 10px 10px;
+}
+
+& .cta-button {
+    margin: 40px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 55%;
+
+
+        & .btn {
+            font-size: 1em;
+            padding: 10px 20px;
+            border-radius: 1in;
+            text-decoration: none;
+            max-width: 13em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+            transition: 0.5s;
+        }
+
+        & .button-project {
+            position: relative;
+            width: 100%;
+            height: 3em;
+            background-color: var(--accent-color);
+            color: var(--button-font-color);
+            border: 2px solid var(--accent-color);
+            padding: 2px;
+        }
+
+        & .button-project:hover {
+            padding-left: 0;
+        }
+        
+        .button-project .icon {
+
+            position: absolute;
+            width: 36px; height: 36px;
+            left: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            fill: var(--secondary-font-color);
+            background-color: var(--bg-color);
+            border-radius: 50%;
+            padding: 0.5em;
+            transition: 0.5s ease-in-out;
+
+        }
+        
+        .button-project:hover .icon {
+            left: calc(100% - 42px);
+        }
+        
+        .button-download {
+            border: 2px solid var(--tertiary-font-color-color);
+            background-color: var(--bg-color);
+            color: var(--secondary-font-color);
+            box-shadow: 0px 0px 0 var --secondary-font-color;
+            transition: all 0.3s;
+
+        }
+
+        .button-download svg{
+            transition: all 0.3s;
+            fill: var(--secondary-font-color);
+        }
+    
+
+        .button-download:hover {
+            transform: translate(-5px, 5px);
+            color: var(--accent-color);
+            border: 2px solid var --accent-color;
+            box-shadow: 5px 5px 0 var(--accent-color);
+
+        }
+
+        .button-download:hover svg {
+            fill:var(--accent-color)
+        }
+}
+
+}

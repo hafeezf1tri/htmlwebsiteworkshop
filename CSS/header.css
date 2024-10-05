@@ -1,3 +1,29 @@
+:root {
+    --accent-color: #6134bd;
+    --lighter-accent-color: #d1bbffae;
+    --bg-color: #0b1215;
+    --bg-color-2: #070a0d;
+    --header-color: #181D23;
+    --primary-font-color: #d6d6d6;
+    --secondary-font-color: #B0B0B0;
+    --tertiary-font-color: #8A8F99;
+    --gradient-color: linear-gradient(to right, #ad94e8, #9b81d7 , #916ade, #7f51db);
+    --button-color: #202225;
+    --button-hover-color:#303335;
+    --button-font-color: #D1D3D5;
+    --repeating-grid-color: #cfcdcd0b;
+    --card-color: #21212180;
+    
+
+    /* shadow color */
+    --sd-highlight: #00000080;
+    --sd-darken: #8b87871d;
+
+    scroll-behavior: smooth;
+}
+
+
+
 header {
     display: flex;
     position: fixed;
@@ -29,4 +55,48 @@ header {
         -webkit-text-fill-color: transparent;
       }
 
+}
+
+nav > #menu {
+    font-size: 25px;
+    display: flex;
+    gap: 2em;
+    align-items: flex-start;
+    background-image: linear-gradient(to right,#ff8800, #1547d1, #1052e0, #e28306);
+    background-position: left;
+    animation:font-animation 8s infinite forwards alternate;
+    background-size: 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: font-animation 8s infinite forwards alternate;
+    list-style-type: none;
+}
+
+li > a {
+    text-decoration: none;
+    cursor: pointer;
+
+
+    & > span {
+        color: var(--secondary-font-color);
+    }
+}
+
+.scroll-link {
+    font-size: 0.8em;
+    background: linear-gradient(to right, #8d73c3, #6744ae, #400ea3) no-repeat right bottom;
+    background-size: 0 4px;
+    transition: background-size 0.3s;
+  }
+  
+  &:hover {
+    background-position: left bottom;
+    background-size: 100% 2px;
+  }
+
+.active-link {
+    background-size: 100% 2px;
+    color: var(--accent-color);
+    font-size: 1em;
 }
