@@ -1,5 +1,26 @@
 /* Define CSS variables for colors and gradients */
+:root {
+    --accent-color: #6134bd;
+    --lighter-accent-color: #d1bbffae;
+    --bg-color: #0b1215;
+    --bg-color-2: #070a0d;
+    --header-color: #181D23;
+    --primary-font-color: #d6d6d6;
+    --secondary-font-color: #B0B0B0;
+    --tertiary-font-color: #8A8F99;
+    --gradient-color: linear-gradient(to right, #ad94e8, #9b81d7 , #916ade, #7f51db);
+    --button-color: #202225;
+    --button-hover-color:#303335;
+    --button-font-color: #D1D3D5;
+    --repeating-grid-color: #cfcdcd0b;
+    --card-color: #21212180;
 
+    /* shadow color */
+    --sd-highlight: #00000080;
+    --sd-darken: #8b87871d;
+
+    scroll-behavior: smooth;
+}
 
 
 /* Global settings for all elements and pseudo-elements */
