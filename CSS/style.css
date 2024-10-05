@@ -14,6 +14,7 @@
     --button-font-color: #D1D3D5;
     --repeating-grid-color: #cfcdcd0b;
     --card-color: #21212180;
+    
 
     /* shadow color */
     --sd-highlight: #00000080;
@@ -21,15 +22,45 @@
 
     scroll-behavior: smooth;
 }
+/* set default style for all elements */
+
+*,
+*::before,
+*::after {
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-optical-sizing: auto;
+    box-sizing: border-box;
+
+}
+
+.h1 {
+
+    font-size: 2.5em;
+    color: var(--primary-font-color)
+}
+
+.highlight-text {
+    
+    background-image: linear-gradient(to right,#ff0404, #ff5b5b, #fcbfbf, #ffffff);
+    background-position: left;
+    animation:font-animation 8s infinite forwards alternate;
+    background-size: 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: font-animation 8s infinite forwards alternate;
+
+}
+
+
 
 
 /* Global settings for all elements and pseudo-elements */
 
-h1 {
-    
-    background-color: var(--bg-color);
-    
-}
+
 
 /* Styles for h1 element  */
 
@@ -41,6 +72,45 @@ h1 {
 
 /* Styles for h2 element  */
 
+h1 {
+    font-size: 1.75em;
+    color: var(--primary-font-color);
 
+
+}
+h2 {
+    font-size: 1.75em;
+    color: var(--secondary-font-color);
+
+
+}
 
 /* Styles for p element  */
+
+p {
+    color: var(--primary-font-color);
+    margin-top: 2em;
+    max-width: 600px;
+    padding: 10px 0 20px 0;
+    color: var(--tertiary-font-color);
+    font-size: 1em;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--tertiary-font-color);
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+header, section {
+
+    border: 1px solid purple;
+}
+
+section {
+    min-height: 100svh;
+    width: 100svw;
+}
