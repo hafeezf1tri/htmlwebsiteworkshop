@@ -44,7 +44,7 @@
 
 .highlight-text {
     
-    background-image: linear-gradient(to right,#ff0404, #ff5b5b, #fcbfbf, #ffffff);
+    background-image: linear-gradient(to right,#ff8800, #1547d1, #1052e0, #e28306);
     background-position: left;
     animation:font-animation 8s infinite forwards alternate;
     background-size: 300%;
@@ -107,10 +107,59 @@ body {
 
 header, section {
 
-    border: 1px solid purple;
+    border: 1px solid orange;
 }
 
+
 section {
-    min-height: 100svh;
+    min-height: 100svh; 
     width: 100svw; 
+    background-image: repeating-linear-gradient(to right, transparent 0 49px, var(--repeating-grid-color) 49px 50px),
+    repeating-linear-gradient(to bottom, transparent 0 49px, var(--repeating-grid-color) 49px 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.section-wrapper {
+    display: flex;
+    align-items: center;
+    width: 40svw;
+}
+
+section:nth-child(odd) {
+
+    background-color: var(--bg-color-2)
+
+}
+
+section:nth-child(even) {
+
+    background-color: var(--bg-color)
+
+}
+
+.section-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.section-title::after{
+    content:'';
+    display: block;
+    width: 60%;
+    margin-top: -3%;
+    margin-left: calc((100% - var (--w)))
+}
+
+.section-title:not(.section-title:has(span.logo-title))::after {
+    --w: 60%; /* width value */
+    content: '';
+    display: block;
+    width: var(--w);
+    margin-top: 3%;
+    margin-left: calc(100% - var(--w));
+    height: 4px;
+    border-radius: 2in;
+    background-color: var(--tertiary-font-color);
+  }
