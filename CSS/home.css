@@ -139,4 +139,32 @@
         }
 }
 
+
+}
+
+
+.img-holder {
+    position: relative;
+
+    & .liquid-shape {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 125%;
+        height: 125%;
+        transform: translate(-10%, -10%);
+        z-index: 0;
+
+    }
+
+    & .liquid-shape path {
+
+        fill: var(--gradient-color);
+
+    }
+
+    & .img-box {
+        position: 
+    }
+    
 }
