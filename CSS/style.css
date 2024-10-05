@@ -163,3 +163,9 @@ section:nth-child(even) {
     border-radius: 2in;
     background-color: var(--tertiary-font-color);
   }
+
+section:not(.main-section){
+    height: 100vmin;
+    scroll-margin-top: 10vmin;
+
+}
