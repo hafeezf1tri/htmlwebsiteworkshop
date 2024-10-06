@@ -84,7 +84,7 @@ li > a {
 }
 
 .scroll-link {
-    font-size: 0.8em;
+    font-size: 1em;
     background: linear-gradient(to right, #f15221, #e07571, #400ea3) no-repeat right bottom;
     background-size: 0 4px;
     transition: background-size 0.3s;
