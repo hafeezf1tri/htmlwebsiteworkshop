@@ -27,7 +27,7 @@
     align-items: center; /* Center items horizontally */
     justify-content: flex-start; /* Align items at the start */
     gap: 1em; /* Space between items */
-    --_card-gradient-color: linear-gradient(to right bottom, #ff9901, rgb(34, 45, 68), #1a2642, #0314ff);
+    --_card-gradient-color: linear-gradient(to right bottom, #912c05, #12032b, #1e0941, #030961);
     min-height: 200svh;
     padding-block: 1em;
 }
