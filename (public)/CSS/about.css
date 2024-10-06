@@ -52,10 +52,19 @@
     content: ' ';
     position: absolute;
     background: linear-gradient(315deg, #ff7606, #d4b7a7, #3c24a7);
-    inset: -10px 140px;
+    inset: clamp(-5px, -10vw, -20px) clamp(100px, 10vw, 140px); /* Dynamic inset values */
     transition: inset 500ms ease;
     z-index: 0;
     animation: animate-gradient 20s linear infinite;
+}
+
+@keyframes animate-gradient {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg); /* Full rotation */
+    }
 }
 
 .profile-picture:hover::before {
@@ -186,7 +195,7 @@
     box-shadow: 0 5px 10px #0000000d;
     transform: translateY(-1.5em) rotate(25deg);
     opacity: 0;
-    transition: 0.2s cubic-bezier(0.41,-0.06, 0.41, 1.74);
+    transition: 0.2s cubic-bezier(0.41, -0.06, 0.41, 1.74);
 }
 
 .socials-container a::after {
@@ -199,7 +208,7 @@
     border-top: 10px solid var(--_social-color);
     transform: translateY(0) rotate(25deg);
     opacity: 0;
-    transition: 0.2s cubic-bezier(0.41,-0.06, 0.41, 1.74);
+    transition: 0.2s cubic-bezier(0.41, -0.06, 0.41, 1.74);
 }
 
 .socials-container a:hover {
@@ -231,5 +240,20 @@
     .socials-container {
         flex-direction: column;
         gap: 1em;
+    }
+}
+
+@keyframes animate-gradient {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-picture::before {
+        inset: clamp(-5px, -5vw, -10px) clamp(50px, 5vw, 100px); /* Smaller inset for mobile */
     }
 }
