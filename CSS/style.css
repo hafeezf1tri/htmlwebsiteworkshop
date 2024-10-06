@@ -124,7 +124,7 @@ section {
 .section-wrapper {
     display: flex;
     align-items: center;
-    width: 60svw;
+    width: 70svw;
 }
 
 section:nth-child(odd) {
@@ -170,8 +170,3 @@ section:not(.main-section){
 
 }
 
-.button-contact {
-
-    
-
-}
