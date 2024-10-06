@@ -1,3 +1,27 @@
+:root {
+    --accent-color: #f06d22;
+    --lighter-accent-color: #f06d22;
+    --bg-color: #0b1215;
+    --bg-color-2: #070a0d;
+    --header-color: #181D23;
+    --primary-font-color: #d6d6d6;
+    --secondary-font-color: #B0B0B0;
+    --tertiary-font-color: #8A8F99;
+    --gradient-color: linear-gradient(to right, #ad94e8, #9b81d7 , #916ade, #7f51db);
+    --button-color: #202225;
+    --button-hover-color:#303335;
+    --button-font-color: #D1D3D5;
+    --repeating-grid-color: #cfcdcd0b;
+    --card-color: #21212180;
+    
+
+    /* shadow color */
+    --sd-highlight: #00000080;
+    --sd-darken: #8b87871d;
+
+    scroll-behavior: smooth;
+}
+
 #skills {
     flex-direction: column;
     justify-content: flex-start;
@@ -27,7 +51,55 @@
     padding: 1em;
 }
 
-.skills-bar {
+.skills-content .skills-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    
+.skills-content .skills-header svg{
+    width: 48px; height: auto;
+    fill: var(--lighter-accent-color);
+}
+
+.skills-title > svg {
+    fill: var(--secondary-font-color);
+    width: 24px;  height: auto;
+}
+
+.skills-area-title {
+    font-size: 1.75em;
+    /* font-size: clamp(1.25em, 1.5em + 0.2vmax, 1.75em); */
+    margin-block: .5em;
+    color: var(--lighter-accent-color);
+}
+
+.skills-subtitle {
+    font-size: 1em;
+    /* font-size: clamp(0.75em, 0.75em + 0.2vmax, 1.25em); */
+    color: var(--secondary-font-color);
+}
+
+.skills-data {
+    margin-block: 1.5em;
+    color: var(--secondary-font-color);
+    animation: skillCardReveal 1s ease-in-out both;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: 10vh;
+}
+
+.skills-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.skills-title .skills-number {
+    margin-left: auto;
+}
+
+.skills-title .skills-name {
+    font-weight: 400;
 }
