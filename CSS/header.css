@@ -1,102 +1,95 @@
-:root {
-    --accent-color: #6134bd;
-    --lighter-accent-color: #d1bbffae;
-    --bg-color: #0b1215;
-    --bg-color-2: #070a0d;
-    --header-color: #181D23;
-    --primary-font-color: #d6d6d6;
-    --secondary-font-color: #B0B0B0;
-    --tertiary-font-color: #8A8F99;
-    --gradient-color: linear-gradient(to right, #fd7a00, #db8a2c , #743e11, #df7b1e);
-    --button-color: #202225;
-    --button-hover-color:#303335;
-    --button-font-color: #D1D3D5;
-    --repeating-grid-color: #cfcdcd0b;
-    --card-color: #21212180;
-    
-
-    /* shadow color */
-    --sd-highlight: #00000080;
-    --sd-darken: #8b87871d;
-
-    scroll-behavior: smooth;
-}
-
-
-
 header {
     display: flex;
     position: fixed;
-    padding: 20px;
-    width:100svw;
-    height:5svw;
+    padding: 2vw;
+    width: 100vw;
+    height: 7vh;
     background-color: var(--header-color);
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     z-index: 10;
+}
 
-    & .logo-holder {
-        display: flex;
-        font-size: 1.5em;
-        gap: 1em;
-        justify-content: flex-start;
-        align-items: center;
-    }
+.logo-holder {
+    display: flex;
+    font-size: clamp(1rem, 2vw, 2.5rem); /* Dynamic font scaling */
+    gap: 1vw; /* Dynamic gap */
+    justify-content: flex-start;
+    align-items: center;
+}
 
-    & .img {
-        width: 5vmin; height: auto;
+.img {
+    width: 5vw; /* Makes the image size responsive */
+    height: auto;
+}
 
-    }
-
-    & .logo-title {
-        background: var(--gradient-color);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
+.logo-title {
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 nav > #menu {
-    font-size: 25px;
+    font-size: clamp(1rem, 2.5vw, 2.5rem); /* Font size adjusts with viewport size */
     display: flex;
-    gap: 2em;
+    gap: 2vw; /* Responsive gap */
     align-items: flex-start;
     background-image: linear-gradient(to right,#ff8800, #1547d1, #1052e0, #e28306);
     background-position: left;
-    animation:font-animation 8s infinite forwards alternate;
+    animation: font-animation 8s infinite forwards alternate;
     background-size: 300%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: font-animation 8s infinite forwards alternate;
     list-style-type: none;
 }
 
 li > a {
     text-decoration: none;
     cursor: pointer;
+}
 
-
-    & > span {
-        color: var(--secondary-font-color);
-    }
+li > a > span {
+    color: var(--secondary-font-color);
 }
 
 .scroll-link {
-    font-size: 1em;
+    font-size: clamp(0.8rem, 1.2vw, 1.5rem); /* Dynamic font scaling */
     background: linear-gradient(to right, #f15221, #e07571, #400ea3) no-repeat right bottom;
     background-size: 0 4px;
     transition: background-size 0.3s;
-  }
-  
-  &:hover {
+}
+
+.scroll-link:hover {
     background-position: left bottom;
     background-size: 100% 2px;
-  }
+}
 
 .active-link {
     background-size: 100% 2px;
     color: var(--accent-color);
-    font-size: 1em;
+    font-size: clamp(0.8rem, 1.2vw, 1.5rem); /* Dynamic font scaling */
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+        height: 10vh;
+    }
+
+    .logo-holder {
+        font-size: clamp(1rem, 4vw, 2.5rem); /* Adjust font size on smaller screens */
+        gap: 2vw;
+    }
+
+    nav > #menu {
+        font-size: clamp(1rem, 4vw, 2.5rem); /* Adjust font size on smaller screens */
+        gap: 3vw;
+    }
+
+    .scroll-link, .active-link {
+        font-size: clamp(0.8rem, 3vw, 1.5rem); /* Dynamic font scaling */
+    }
 }

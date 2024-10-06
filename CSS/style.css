@@ -55,23 +55,6 @@
 
 }
 
-
-
-
-/* Global settings for all elements and pseudo-elements */
-
-
-
-/* Styles for h1 element  */
-
-
-
-/* Styles for highlighted text within h1 */
-
-
-
-/* Styles for h2 element  */
-
 h1 {
     font-size: 6em;
     color: var(--primary-font-color);
@@ -124,7 +107,7 @@ section {
 .section-wrapper {
     display: flex;
     align-items: center;
-    width: 70svw;
+    width: 50svw;
 }
 
 section:nth-child(odd) {
@@ -170,3 +153,26 @@ section:not(.main-section){
 
 }
 
+@media (max-width: 768px) {
+    h1 {
+        font-size: clamp(2.5rem, 5vw, 6rem); /* Adjust font size for smaller screens */
+    }
+
+    h2 {
+        font-size: clamp(2rem, 3.5vw, 5rem); /* Adjust font size for smaller screens */
+    }
+
+    p {
+        font-size: clamp(1rem, 2.5vw, 1.2rem); /* Adjust paragraph font size */
+        max-width: 90%; /* Make text take more width on smaller screens */
+    }
+
+    .section-wrapper {
+        width: 85vw; /* Adjust section width for smaller screens */
+    }
+
+    section:not(.main-section) {
+        height: auto; /* Allow content to dictate section height on small screens */
+        padding: 20px;
+    }
+}
