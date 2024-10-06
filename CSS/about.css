@@ -1,5 +1,5 @@
 :root {
-    --accent-color: #6134bd;
+    --accent-color: #f06d22;
     --lighter-accent-color: #d1bbffae;
     --bg-color: #0b1215;
     --bg-color-2: #070a0d;
@@ -161,7 +161,6 @@
     justify-content: space-evenly;
     align-items: center; 
     gap: 2em;
-    border: 1px yellow;
     padding: 2em;
     margin-top: 1em;
 }
@@ -209,4 +208,22 @@
     transform: translateY(0) rotate(25deg);
     opacity: 0;
     transition: 0.2s cubic-bezier(0.41,-0.06, 0.41, 1.74);
+}
+
+.socials-container a:hover {
+    background-color: var(--_social-color);
+}
+
+.socials-container a:hover::before {
+    transform: translateY(-3.3em) rotate(0deg);
+    opacity: 1;
+}
+
+.socials-container a:hover::after {
+    transform: translateY(-2em) rotate(0deg);
+    opacity: 1;
+}
+
+.socials-container a:svg {
+    fill: white;
 }
