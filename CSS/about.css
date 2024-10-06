@@ -38,12 +38,28 @@
     inset: -10px 140px;
     transition: inset 0.3 ease;
     z-index: 0;
-    animation: animate-gradient 5x linear infinite;
+    animation: animate-gradient 15s linear infinite;
 }
 
 /* line rotation lmao*/
 @keyframes animate-gradient {
     from {
-        
+        transform: rotate(0deg);
     }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.profile-picture:hover::before {
+    inset: -20px 0px;
+}
+
+.profile-picture::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    z-index: 1;
+    background: var(--bg-color);
+    border-radius: 50%;
 }
