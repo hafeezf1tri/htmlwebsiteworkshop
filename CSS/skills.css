@@ -1,0 +1,33 @@
+#skills {
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100svh;
+    padding-block: 1em;
+}
+
+#skills .section-title {
+    margin-block: 1em;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items:center;
+    width: 90%;
+    margin-top: 2em;
+}
+
+.skills-content {
+    background-color: var(--card-color);
+    min-width: 550px;
+    border-radius: 10px;
+    flex: 1 1 calc(50% - 1em); /* Take up half the width minus gap */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    --webkit-backdrop-filter: blur(10px);
+    padding: 1em;
+}
+
+.skills-bar {
+
+    
+}
