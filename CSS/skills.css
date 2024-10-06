@@ -1,13 +1,13 @@
 :root {
     --accent-color: #f06d22;
-    --lighter-accent-color: #f06d22;
+    --lighter-accent-color: #0f1052;
     --bg-color: #0b1215;
     --bg-color-2: #070a0d;
     --header-color: #181D23;
     --primary-font-color: #d6d6d6;
     --secondary-font-color: #B0B0B0;
     --tertiary-font-color: #8A8F99;
-    --gradient-color: linear-gradient(to right, #ad94e8, #9b81d7 , #916ade, #7f51db);
+    --gradient-color: linear-gradient(to right, #dd5e24, #402deb , #916ade, #c2681f);
     --button-color: #202225;
     --button-hover-color:#303335;
     --button-font-color: #D1D3D5;
@@ -35,9 +35,9 @@
 
 .skills {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     justify-items:center;
-    width: 90%;
+    width: 100%;
     margin-top: 2em;
 }
 
@@ -59,7 +59,7 @@
 
 .skills-content .skills-header svg{
     width: 48px; height: auto;
-    fill: var(--lighter-accent-color);
+    fill: var(--accent-color);
 }
 
 .skills-title > svg {
@@ -102,4 +102,82 @@
 
 .skills-title .skills-name {
     font-weight: 400;
+}
+
+
+.skills-percentage {
+    height: 5px;
+    border-radius: 0.25rem;
+    background: linear-gradient();
+}
+
+.skills-bar {
+    background-color: var(--lighter-accent-color);
+}
+
+.skills-percentage {
+    display: block;
+    background: var(--accent-color);
+    width: 0;
+
+
+    /* animation */
+    animation: percentageReveal 1s ease-in-out both;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: 15vh;
+    animation-fill-mode: forwards; /* Ensure it retains the final state */
+}
+
+@keyframes skillCardReveal {
+    from {
+        opacity: 0;
+        /* goes left */
+        transform: translate(-50%, 100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0,0);
+    }
+
+}
+
+
+@keyframes percentageReveal {
+    from {
+        /*initial value of the css properties*/
+        width: 0;
+    }
+
+    to {
+        /*end value of the progress bar = custom css variable value "--_percent"*/
+        width: var(--_percent);
+    }
+}
+
+/*styling for each the skills icon, color and size*/
+.skills-title {
+    --_color: var(--custom_color); /*getting another variable to store the custom color value from container style*/
+
+    /*nesting - all the element is lolcated within the style block of the container*/
+    /*all the child could access their parent container style*/
+    & svg {
+        fill: var(--secondary-font-color);
+        width: 24px;  height: auto;
+        transition: 0.5s ease;
+    }
+
+    &:hover svg {
+        fill: var(--accent-color);
+    }
+
+    & .skills-name {
+        font-weight: 400; /*bold out the skills name*/
+        transition: 0.5s ease;
+    }
+
+    &:hover .skills-name {
+        color: var(--_color);
+    }
 }

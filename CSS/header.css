@@ -7,7 +7,7 @@
     --primary-font-color: #d6d6d6;
     --secondary-font-color: #B0B0B0;
     --tertiary-font-color: #8A8F99;
-    --gradient-color: linear-gradient(to right, #ad94e8, #9b81d7 , #916ade, #7f51db);
+    --gradient-color: linear-gradient(to right, #2c07f8, #9089eb , #e6997b, #df7b1e);
     --button-color: #202225;
     --button-hover-color:#303335;
     --button-font-color: #D1D3D5;
@@ -85,7 +85,7 @@ li > a {
 
 .scroll-link {
     font-size: 0.8em;
-    background: linear-gradient(to right, #8d73c3, #6744ae, #400ea3) no-repeat right bottom;
+    background: linear-gradient(to right, #f15221, #e07571, #400ea3) no-repeat right bottom;
     background-size: 0 4px;
     transition: background-size 0.3s;
   }
