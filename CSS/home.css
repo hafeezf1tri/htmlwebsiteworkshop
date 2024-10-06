@@ -147,7 +147,7 @@
     & .liquid-shape {
         position: absolute;
         top: 0;
-        left: 0;
+        left: -150px;
         width: 150%;
         height: 150%;
         transform: translate(-15%, 5%);
@@ -164,6 +164,8 @@
     & .img-box {
         position: relative;
         z-index: 1;
+        left: -150px;
+    
     }
 
     & .img-box img {
@@ -172,6 +174,7 @@
         border-radius: 50%;
         filter: drop-shadow(8px 5px rgb(12, 44, 151));
         transition: transform 0.3x ease-in-out;
+
     }
 
     & .img-box img:hover {
