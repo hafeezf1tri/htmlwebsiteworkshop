@@ -54,6 +54,7 @@
     
     position: relative; 
     padding: 10px 10px;
+    z-index: 0;
 }
 
 & .cta-button {
