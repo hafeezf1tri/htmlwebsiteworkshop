@@ -1,6 +1,6 @@
 /* Define CSS variables for colors and gradients */
 :root {
-    --accent-color: #6134bd;
+    --accent-color: #6134bd; 
     --lighter-accent-color: #d1bbffae;
     --bg-color: #0b1215;
     --bg-color-2: #070a0d;
@@ -14,7 +14,6 @@
     --button-font-color: #D1D3D5;
     --repeating-grid-color: #cfcdcd0b;
     --card-color: #21212180;
-    
 
     /* shadow color */
     --sd-highlight: #00000080;
@@ -22,98 +21,84 @@
 
     scroll-behavior: smooth;
 }
-/* set default style for all elements */
 
+/* Global settings for all elements and pseudo-elements */
+/* set default style for all elements */
 *,
 *::before,
 *::after {
-
+    /* global setting for styling */
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', san-serif;
     font-optical-sizing: auto;
     box-sizing: border-box;
-
 }
 
-.h1 {
-
+/* Styles for h1 element  */
+/* Styles for highlighted text within h1 */
+h1 {
     font-size: 2.5em;
-    color: var(--primary-font-color)
+    color: var(--primary-font-color);
 }
 
 .highlight-text {
-    
-    background-image: linear-gradient(to right,#ff8800, #1547d1, #1052e0, #e28306);
+    font-family: 'MuseoModerno', sans-serif;
+    background-image: linear-gradient(to right,#f8cdda, #a17fe0, #5d26c1, #0869d7);
+
+    /* not common used */
     background-position: left;
-    animation:font-animation 8s infinite forwards alternate;
     background-size: 300%;
-    background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: font-animation 8s infinite forwards alternate;
-
 }
 
+@keyframes font-animation {
+    0% {
+        background-position: left;
+    }
 
-
-
-/* Global settings for all elements and pseudo-elements */
-
-
-
-/* Styles for h1 element  */
-
-
-
-/* Styles for highlighted text within h1 */
-
-
+    100% {
+        background-position: right;
+    }
+}
 
 /* Styles for h2 element  */
-
-h1 {
-    font-size: 6em;
-    color: var(--primary-font-color);
-
-
-}
 h2 {
-    font-size: 4em;
+    font-size: 1.75em;
     color: var(--secondary-font-color);
-
-
 }
 
 /* Styles for p element  */
-
 p {
-    color: var(--primary-font-color);
+    font: 1em; /*16px*/
     margin-top: 2em;
     max-width: 600px;
+    /* top 10px padding, bottom 20px padding */
     padding: 10px 0 20px 0;
     color: var(--tertiary-font-color);
-    font-size: 1em;
 }
 
+/* Styles for body */
 body {
     background-color: var(--bg-color);
-    color: var(--tertiary-font-color);
+    color: var(--tertiary-font-color); /*default font color for the whole website*/
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     overflow-x: hidden;
 }
 
 header, section {
-
-    border: 1px solid orange;
+    border: 1px solid red;
 }
 
-
+/* Style for the section */
 section {
-    min-height: 100svh; 
-    width: 100svw; 
+    min-height: 100svh; /*set the minimum height for each container, to be at least 100 view port height*/
+    width: 100svw; /*set the width for each container, to be at least 100 view port width*/
     background-image: repeating-linear-gradient(to right, transparent 0 49px, var(--repeating-grid-color) 49px 50px),
     repeating-linear-gradient(to bottom, transparent 0 49px, var(--repeating-grid-color) 49px 50px);
     display: flex;
@@ -123,55 +108,38 @@ section {
 
 .section-wrapper {
     display: flex;
-    align-items: center;
-    width: 60svw;
+    width: 85svw;
+    border: 2px solid cyan;
 }
 
+/*Select all the odd index section element in html file*/
 section:nth-child(odd) {
-
-    background-color: var(--bg-color-2)
-
+    background-color: var(--bg-color-2);
 }
 
+/*Select all the even index section element in html file*/
 section:nth-child(even) {
-
-    background-color: var(--bg-color)
-
+    background-color: var(--bg-color);
 }
 
 .section-title {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'MuseoModerno', sans-serif;
     font-weight: bold;
 }
 
-.section-title::after{
-    content:'';
-    display: block;
-    width: 60%;
-    margin-top: -3%;
-    margin-left: calc((100% - var (--w)))
-}
-
-.section-title:not(.section-title:has(span.logo-title))::after {
+.section-title:not(.section-title:has(span.logo-title))::after{
     --w: 60%; /* width value */
     content: '';
     display: block;
     width: var(--w);
-    margin-top: 3%;
-    margin-left: calc(100% - var(--w));
+    margin-top: -3%;
+    margin-left: calc((100% - var(--w)));
     height: 4px;
     border-radius: 2in;
     background-color: var(--tertiary-font-color);
-  }
+}
 
 section:not(.main-section){
     height: 100vmin;
     scroll-margin-top: 10vmin;
-
-}
-
-.button-contact {
-
-    
-
 }
