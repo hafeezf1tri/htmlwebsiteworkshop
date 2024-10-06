@@ -1,0 +1,172 @@
+/* Define CSS variables for colors and gradients */
+:root {
+    --accent-color: #f06d22;
+    --lighter-accent-color: #d1bbffae;
+    --bg-color: #0b1215;
+    --bg-color-2: #070a0d;
+    --header-color: #181D23;
+    --primary-font-color: #d6d6d6;
+    --secondary-font-color: #B0B0B0;
+    --tertiary-font-color: #8A8F99;
+    --gradient-color: linear-gradient(to right, #ad94e8, #9b81d7 , #916ade, #7f51db);
+    --button-color: #202225;
+    --button-hover-color:#303335;
+    --button-font-color: #D1D3D5;
+    --repeating-grid-color: #cfcdcd0b;
+    --card-color: #21212180;
+    
+
+    /* shadow color */
+    --sd-highlight: #00000080;
+    --sd-darken: #8b87871d;
+
+    scroll-behavior: smooth;
+}
+/* set default style for all elements */
+
+*,
+*::before,
+*::after {
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-optical-sizing: auto;
+    box-sizing: border-box;
+
+}
+
+.h1 {
+
+    font-size: 0.5em;
+    color: var(--primary-font-color)
+}
+
+.highlight-text {
+    
+    background-image: linear-gradient(to right,#ff8800, #1547d1, #1052e0, #e28306);
+    background-position: left;
+    animation:font-animation 8s infinite forwards alternate;
+    background-size: 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: font-animation 8s infinite forwards alternate;
+
+}
+
+
+
+
+/* Global settings for all elements and pseudo-elements */
+
+
+
+/* Styles for h1 element  */
+
+
+
+/* Styles for highlighted text within h1 */
+
+
+
+/* Styles for h2 element  */
+
+h1 {
+    font-size: 6em;
+    color: var(--primary-font-color);
+
+
+}
+h2 {
+    font-size: 4em;
+    color: var(--secondary-font-color);
+
+
+}
+
+/* Styles for p element  */
+
+p {
+    color: var(--primary-font-color);
+    margin-top: 2em;
+    max-width: 600px;
+    padding: 10px 0 20px 0;
+    color: var(--tertiary-font-color);
+    font-size: 1em;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--tertiary-font-color);
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+header, section {
+
+    border: 1px solid orange;
+}
+
+
+section {
+    min-height: 100svh; 
+    width: 100svw; 
+    background-image: repeating-linear-gradient(to right, transparent 0 49px, var(--repeating-grid-color) 49px 50px),
+    repeating-linear-gradient(to bottom, transparent 0 49px, var(--repeating-grid-color) 49px 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-wrapper {
+    display: flex;
+    align-items: center;
+    width: 70svw;
+}
+
+section:nth-child(odd) {
+
+    background-color: var(--bg-color-2)
+
+}
+
+section:nth-child(even) {
+
+    background-color: var(--bg-color)
+
+}
+
+.section-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.section-title::after{
+    content:'';
+    display: block;
+    width: 60%;
+    margin-top: -3%;
+    margin-left: calc((100% - var (--w)))
+}
+
+.section-title:not(.section-title:has(span.logo-title))::after {
+    --w: 60%; /* width value */
+    content: '';
+    display: block;
+    width: var(--w);
+    margin-top: 3%;
+    margin-left: calc(100% - var(--w));
+    height: 4px;
+    border-radius: 2in;
+    background-color: var(--tertiary-font-color);
+  }
+
+section:not(.main-section){
+    height: 100vmin;
+    scroll-margin-top: 10vmin;
+
+}
+
